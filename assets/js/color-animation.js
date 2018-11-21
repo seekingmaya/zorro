@@ -12,7 +12,9 @@ var siteColors,
     initOnSpacebar = 1,
     changeTaxi,
     browserIsSafari = /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor),
-    transitionEnd = browserIsSafari ? 'webkitTransitionEnd' : 'transitionend';
+	transitionEnd = browserIsSafari ? 'webkitTransitionEnd' : 'transitionend',
+	spaceBar = false,
+	spaceBarHitOneTime = false;
 	
 
 	siteColors = {
@@ -90,11 +92,6 @@ $(function(){
   changeColors = function(arg){
 
 	var rgb = colorsArray[clicks].last;
-	
-	if(rgb == "rgb(255,255,255)") {
-		$taxi.css('background-color',"rgb(211,211,211)");
-		return;
-	}
 
 	var revertedRGB = revertColor(rgb);
 
@@ -343,20 +340,32 @@ function initColorChanges(changeClicks,dir){
 
             }
 
-        })(window,document);
+		})(window,document);
+		
+		function assignFirstColor() {
+			for(var v = 0, colorsArrayItem; v < colorsArray.length; v++){
 
-  for(var v = 0, colorsArrayItem; v < colorsArray.length; v++){
+				colorsArrayItem = colorsArray[v];
+			
+				 if(spaceBar) {
+					colorsArrayItem.first = revertColor(colorsArrayItem.last);
+				}
+				else {
+					colorsArrayItem.first = 'rgb(0,0,0)';
+				}
+			
+			}
+		}
+		assignFirstColor();
 
-    colorsArrayItem = colorsArray[v];
-
-    if(!('first' in colorsArrayItem)) colorsArrayItem.first = 'rgb(0,0,0)';
-
-    }
+  
 
   $box.mousedown(function(e){
 
 	changeTaxi(this);
-	$taxi.css('background-color',"rgb(0,0,0)");
+	if(spaceBar == true) {
+		changeColors();
+	}
     
     });
 
@@ -377,8 +386,50 @@ function initColorChanges(changeClicks,dir){
     var key = e.keyCode;
 
         if(key == 32){
+			
+			if(!spaceBarHitOneTime) {
+				changeColors();
+				spaceBar = true;
+				spaceBarHitOneTime = true;
+				assignFirstColor();
 
-			changeColors();
+				var clicksDefined = colorsArray[clicks],
+				revertedColor = revertColor(clicksDefined.last);
+
+				for(var i = 0, item, firstToLast, stops; i < linearGradients.length; i++){
+
+					item = linearGradients[i];
+
+					firstToLast = /first-to-last$/i.test(item.getAttribute('class'));
+
+					stops = item.getElementsByTagName('stop');
+
+					stops[firstToLast ? 1 : 0].setAttribute('stop-color',revertedColor);
+					stops[firstToLast ? 0 : 1].setAttribute('stop-color',clicksDefined.last)
+
+        		}
+			}
+			else {
+				spaceBarHitOneTime = false;
+				spaceBar = false;
+				assignFirstColor();
+				$taxi.css('background-color',"rgb(0,0,0)");
+				var clicksDefined = colorsArray[clicks];
+
+				for(var i = 0, item, firstToLast, stops; i < linearGradients.length; i++){
+
+					item = linearGradients[i];
+
+					firstToLast = /first-to-last$/i.test(item.getAttribute('class'));
+
+					stops = item.getElementsByTagName('stop');
+
+					stops[firstToLast ? 1 : 0].setAttribute('stop-color','rgb(0,0,0)');
+					stops[firstToLast ? 0 : 1].setAttribute('stop-color',clicksDefined.last)
+
+        		}
+			}
+			
 		}
 	});
 

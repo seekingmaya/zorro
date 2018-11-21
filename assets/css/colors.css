@@ -1,0 +1,29 @@
+/*Set trainsition time in Seconds:*/
+
+.transitionTime {
+  transition-duration: 1s;
+}
+
+/*Site Colors ::
+background-color  :: set Background Colors
+color             :: set text / logo Colors*/
+
+.Color-taxi {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.Color-about {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.Color-work {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.Color-contact {
+  background-color: #000000;
+  color: #ffffff;
+}

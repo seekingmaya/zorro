@@ -1,0 +1,122 @@
+.copy-bg {
+  background: #ffffff;
+  position: absolute;
+  z-index: -1;
+}
+
+.getColors {
+  display: none;
+}
+
+.copy-bgSecond {
+  display: none;
+}
+
+#contentWrapperSecond {
+  display: none;
+}
+
+.fullPage {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.Color-taxi {
+  background-color: #000000;
+}
+
+.Color-work {
+  background-color: #ffffff;
+}
+
+.Color-about {
+  /*background-color: #00ffff;*/
+  background-color: #000000;
+}
+
+.Color-contact {
+  /*background-color: #00ff01;*/
+  background-color: #ffffff;
+}
+
+.Color-text-taxi {
+  color: #ffffff;
+}
+
+.Color-text-work {
+  color: #ffffff;
+}
+
+.Color-text-about {
+  /*color: #ffff01;*/
+  color: #ffffff;
+}
+
+.Color-text-contact, .socialText {
+  /*color: #ff0188;*/
+  color: #ffffff;
+}
+
+.copy-bg-parent {
+  /* background-color: #00ff01; */
+}
+
+.logoImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  opacity: 0;
+}
+
+#logoWrapper {
+  border: 1px solid rgba(26,26,26,0);
+  display: inline-block;
+  height: 165px;
+  overflow: hidden;
+  position: relative;
+  width: 302px;
+}
+
+.taxi-logo-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.taxi-logo-color {
+  fill: #ffffff;
+}
+
+.social-icon-svg {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.social-icon-color {
+  fill: #ffffff;
+}
+
+.taxi-logo-svg {
+  opacity: 0;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+}
+
+.tumblr-description {
+  visibility: hidden;
+}
+
+a.caption-link, a.caption-link:visited {
+  font-weight: bold;
+  color: #fff;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+a.caption-link:hover {
+  color: #D0D0D0;
+}

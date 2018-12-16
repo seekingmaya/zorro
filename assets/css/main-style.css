@@ -1,887 +1,803 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400&text=0123456789:);
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html {
+    background-color: black;
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
 }
 
-.vertical-align-middle{
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  display: table-cell;
-  vertical-align: middle;
+.vertical-align-middle {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.logo-hover-text{
-  opacity: 0;
+.logo-hover-text {
+    opacity: 0;
 }
 
-.taxi-logo-text{
-  margin: 0;
-  color: #fff;
-  text-transform: none;
-  font-weight: normal;
-  line-height: 1px;
+.taxi-logo-text {
+    margin: 0;
+    color: #fff;
+    text-transform: none;
+    font-weight: normal;
+    line-height: 1px;
 }
 
-.twttr-msg p:nth-of-type(2) a{
-  text-decoration: none !important;
+.twttr-msg p:nth-of-type(2) a {
+    text-decoration: none !important;
 }
 
 .box {
-  font-size: 50px;
-  overflow: hidden;
-  position: absolute;
-  text-transform: uppercase;
-  z-index: 99;
+    font-size: 50px;
+    overflow: hidden;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 99;
 }
 
 .box.small {
-  cursor: pointer;
-  font-size: 35px;
+    cursor: pointer;
+    font-size: 35px;
 }
 
 .box.inactive-side .img,
 .box.inactive-up-down .img {
-  height: 65px;
-  width: 120px;
+    height: 65px;
+    width: 120px;
 }
 
 .box .img img {
-  height: 100%;
-  width: 100%;
+    height: 100%;
+    width: 100%;
 }
 
 .box-table {
-  display: table;
-  height: 100%;
-  width: 100%;
+    display: table;
+    height: 100%;
+    width: 100%;
 }
 
 .hover-text {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  width: 100%;
-  z-index: 100;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    z-index: 100;
 }
 
 .content-text {
-  position: absolute;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 30px 100px;
-  text-transform: none;
-  font-size:  35px;
-  opacity: 0;
-  -webkit-transform: scale(.01, .01);
-  -moz-transform: scale(.01, .01);
-  transform: scale(.01, .01);
-  -ms-transform-origin: 20% 40%; /* IE 9 */
-  -webkit-transform-origin: 20% 40%; /* Chrome, Safari, Opera */
-  transform-origin: 50% 50%;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 100px;
+    text-transform: none;
+    font-size: 35px;
+    opacity: 0;
+    -webkit-transform: scale(.01, .01);
+    -moz-transform: scale(.01, .01);
+    transform: scale(.01, .01);
+    -ms-transform-origin: 20% 40%;
+    /* IE 9 */
+    -webkit-transform-origin: 20% 40%;
+    /* Chrome, Safari, Opera */
+    transform-origin: 50% 50%;
 }
 
 #taxi {
-  background-color: #000000;
-  color: #fff;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+    background-color: #000000;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
 }
 
 #taxi.inactive-side {
-  bottom: 20%;
-  right: 80%;
+    bottom: 20%;
+    right: 80%;
 }
 
 #taxi.inactive-up-down {
-  bottom: 80%;
-  right: 20%;
+    bottom: 80%;
+    right: 20%;
 }
 
 #taxi.inactive-side.inactive-up-down {
-  right: 80%;
+    right: 80%;
 }
 
 #taxi.small {
-  font-size: 35px;
+    font-size: 35px;
 }
 
-.contactHyperlink{
-  padding: 2px 3px;
-  text-transform: uppercase;
+.contactHyperlink {
+    padding: 2px 3px;
+    text-transform: uppercase;
 }
 
-.socialText{
-  text-transform: uppercase;
+.socialText {
+    text-transform: uppercase;
 }
 
-.twttr-msg.twttr-active > div > p:first-child .socialText{
-  position: relative;
+.twttr-msg.twttr-active>div>p:first-child .socialText {
+    position: relative;
 }
 
-.emphasized:first-child{
-  padding: 4px 11px 2px 11px;
+.emphasized:first-child {
+    padding: 4px 11px 2px 11px;
 }
 
-.about-text-landscape-second{
-  color: #000;
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 130%;
+.about-text-landscape-second {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 130%;
 }
 
-.content-text-second{
-  display: none !important;
+.content-text-second {
+    display: none !important;
 }
-
 
 .about-text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  z-index: 1;
-  transition: opacity .5s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: 1;
+    transition: opacity .5s ease;
 }
 
-.about-text-hidden{
-  opacity: 0;
-  z-index: 0;
+.about-text-hidden {
+    opacity: 0;
+    z-index: 0;
 }
 
 .span-50 {
-  font-size: 50px;
+    font-size: 50px;
 }
 
 .span-70 {
-  font-size: 70px;
+    font-size: 70px;
 }
 
 .span-36 {
-  font-size: 36px;
+    font-size: 36px;
 }
 
 .span-60 {
-  font-size: 60px;
+    font-size: 60px;
 }
 
 .span-55 {
-  font-size: 55px;
+    font-size: 55px;
 }
 
 /* Twitter module */
+
 #twttr-box {
-  position: relative;
-  min-width: inherit;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+    position: relative;
+    min-width: inherit;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 #twttr-box h1 {
-  font-weight: normal;
-  text-align: center;
+    font-weight: normal;
+    text-align: center;
 }
 
 #twttr-box a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .twttr-msg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: table;
-  table-layout: fixed;
-  width: 100%;
-  margin: auto;
-  font-size: 31px;
-  font-weight: normal;
-  opacity: 0;
-  text-align: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: auto;
+    font-size: 31px;
+    font-weight: normal;
+    opacity: 0;
+    text-align: center;
 }
 
 .twttr-msg div:not(#social-icons) {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.twttr-msg > div > p:first-child{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  white-space: nowrap; 
+.twttr-msg>div>p:first-child {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    white-space: nowrap;
 }
 
 .twttr-msg p:nth-of-type(1) {
-  max-height: 100px;
-  overflow: hidden;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .twttr-msg p div {
-  display: block;
+    display: block;
 }
 
 .twttr-msg p:nth-of-type(2) {
-  font-size: 24px;
+    font-size: 24px;
 }
 
 /* Tumblr widget */
+
 .nav {
-  display: table;
-  height: 100%;
-  position: absolute;
-  right: 50px;
-  text-align: center;
-  top: 0;
-  width: 12px;
-  z-index: 1000;
+    display: table;
+    height: 100%;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    top: 0;
+    width: 12px;
+    z-index: 1000;
 }
 
 .nav-td {
-  display: table-cell;
-  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .nav-circle {
-  background: #000;
-  border-radius: 10px;
-  display: block;
-  height: 12px;
-  text-align: center;
-  margin-bottom: 20px;
-  width: 12px;
-  border:2px solid rgb(0,0,0);
+    background: #000;
+    border-radius: 10px;
+    display: block;
+    height: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 12px;
+    border: 2px solid rgb(0, 0, 0);
 }
+
 .nav .nav-td .active {
-  width: 16px;
-  height: 16px;
-  margin-left: -2px;
+    width: 16px;
+    height: 16px;
+    margin-left: -2px;
 }
+
 #tumblr-box {
-  height: 366px;
-  position: relative;
+    height: 366px;
+    position: relative;
 }
 
 .nav-next,
 .nav-prev {
-  color: #fff;
-  cursor: pointer;
-  font-family: 'Futura', Helvetica, Arial, sans-serif;
-  font-size: 120px;
-  position: absolute;
-  text-shadow: 0 0 3px #000;
-  top: 150px;
-  z-index: 1010;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Futura', Helvetica, Arial, sans-serif;
+    font-size: 120px;
+    position: absolute;
+    text-shadow: 0 0 3px #000;
+    top: 150px;
+    z-index: 1010;
 }
 
 .nav-next {
-  right: 50%;
-  margin-right: -440px;
+    right: 50%;
+    margin-right: -440px;
 }
 
 .nav-prev {
-  left: 50%;
-  margin-left: -440px;
+    left: 50%;
+    margin-left: -440px;
 }
 
 .tumblr-post.hidden {
-  display: none;
+    display: none;
 }
 
 #about .tumblr-post-container,
 #tumblr-box .tumblr-post-container {
-  cursor: pointer;
-  left: 50%;
-  margin-left: -300px;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 600px;
-  height: 100%;
+    cursor: pointer;
+    left: 50%;
+    margin-left: -300px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 600px;
+    height: 100%;
 }
-
 
 #about .tumblr-post-container.active,
 #tumblr-box .tumblr-post-container.active {
-  opacity: 1;
-  z-index: 100;
+    opacity: 1;
+    z-index: 100;
 }
 
 #tumblr-box h1 {
-  font-weight: normal;
-  line-height: 368px;
-  margin: 0;
-  text-align:center;
+    font-weight: normal;
+    line-height: 368px;
+    margin: 0;
+    text-align: center;
 }
 
 .tumblr-post-container a {
-  color: #1a1a1a;
-  text-decoration: none;
+    color: #1a1a1a;
+    text-decoration: none;
 }
 
 .tumblr-post-container .tumblr-description {
-  height: 88px;
-  max-width: 80%;
-  overflow: hidden;
+    height: 88px;
+    max-width: 80%;
+    overflow: hidden;
 }
 
 .tumblr-post-container p {
-  font-size: 17px;
-  line-height: 18px;
-  margin: 0 0 15px;
-  text-align: left;
-  text-transform: none;
-  word-wrap: break-word;
+    font-size: 17px;
+    line-height: 18px;
+    margin: 0 0 15px;
+    text-align: left;
+    text-transform: none;
+    word-wrap: break-word;
 }
 
 .tumblr-post-container p:first-child {
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 }
 
 .tumblr-post-container img {
-  max-height: 313px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  position: relative;
+    max-height: 313px;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    position: relative;
 }
 
 .tumblr-post-container iframe {
-  width: 100%;
-  height: 300px;
+    width: 100%;
+    height: 300px;
 }
 
 .tumblr-post-container .iframe-fix {
-  height: 263px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 468px;
-  z-index: 1000;
+    height: 263px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 468px;
+    z-index: 1000;
 }
 
-.tumblr-post-container .tumblr-post-wrapper{
-  width: 100%;
-  text-align: center;
+.tumblr-post-container .tumblr-post-wrapper {
+    width: 100%;
+    text-align: center;
 }
 
-.tumblr-post-container .tumblr-post-individual{
-  position: absolute;
-  z-index: 1;
-  width: 600px;
-  height: 100%;
-  display: table;
-  transition: opacity .5s ease;
+.tumblr-post-container .tumblr-post-individual {
+    position: absolute;
+    z-index: 1;
+    width: 600px;
+    height: 100%;
+    display: table;
+    transition: opacity .5s ease;
 }
 
-.tumblr-post-container .tumblr-post-individual-hidden{
-  opacity: 0;
-  z-index: 0;
+.tumblr-post-container .tumblr-post-individual-hidden {
+    opacity: 0;
+    z-index: 0;
 }
 
 .tumblr-post-container.active p {
-  display: none;
+    display: none;
 }
 
 .aboutFirst-p {
-  min-width:645px;
-  font-size: 37px;
-  line-height: 45px;
+    min-width: 645px;
+    font-size: 37px;
+    line-height: 45px;
 }
 
 .image-caption {
-  color: #000;
-  text-align: center;
-  font-size: 18px;
-  width: 100%;
-  padding-top: 5%;
-  line-height: normal;
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    width: 100%;
+    padding-top: 5%;
+    line-height: normal;
 }
 
-
-.audioDebug{
-  height: 75%;
-  max-height: 250px;
+.audioDebug {
+    height: 75%;
+    max-height: 250px;
 }
 
-.loader-wrapper{
-  position: absolute;
-  z-index: 10000;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  background-color: inherit;
+.loader-wrapper {
+    position: absolute;
+    z-index: 10000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background-color: inherit;
 }
 
-.content-text-taxi{
-  z-index: 100;
-  bottom: 0;
-  display: table;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  opacity: 0;
-  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  transform: scale(1, 1);
+.content-text-taxi {
+    z-index: 100;
+    bottom: 0;
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    opacity: 0;
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
-.content-text-taxi .content-inner-taxi-wrapper{
-  height: 100% !important;
+.content-text-taxi .content-inner-taxi-wrapper {
+    height: 100% !important;
 }
 
 .content-text-taxi .tumblr-posts,
-.content-text-taxi .tumblr-post-wrapper{
-  height: 100% !important;
+.content-text-taxi .tumblr-post-wrapper {
+    height: 100% !important;
 }
 
-.content-text-taxi svg{
-  display: block;
-  width: 100%;
-  height: 75%;
-  max-height: 100%;
-  -ms-transform-origin: center;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  -webkit-transition: height .9s ease;
-  transition: height .9s ease;
+.content-text-taxi svg {
+    display: block;
+    width: 100%;
+    height: 75%;
+    max-height: 100%;
+    -ms-transform-origin: center;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: height .9s ease;
+    transition: height .9s ease;
 }
 
-.content-text-taxi-not-active svg{
-  height: 85px;
+.content-text-taxi-not-active svg {
+    height: 85px;
 }
 
-.content-text-taxi svg stop{
-  -webkit-transition: stop-color 1s ease;
-  transition: stop-color 1s ease;
+.content-text-taxi svg stop {
+    -webkit-transition: stop-color 1s ease;
+    transition: stop-color 1s ease;
 }
 
-.content-text-taxi #tumblr-box .tumblr-post-container{
-  left: 0;
-  width: 100%;
-  margin: auto;
+.content-text-taxi #tumblr-box .tumblr-post-container {
+    left: 0;
+    width: 100%;
+    margin: auto;
 }
 
-.content-text-taxi .tumblr-post-container .tumblr-post-individual{
-  width: 100%;
+.content-text-taxi .tumblr-post-container .tumblr-post-individual {
+    width: 100%;
 }
-
 
 @media screen and (max-width: 1024px) {
-
-
-.content-text-first .content-cell:first-child{
-  margin-top: 0;
-}
-
-p[class*="-p "]{
-  min-width: 0 !important;
-  max-width: 90% !important;
-  width: 90% !important;
-  height: 100%;
-  margin: 0 auto;
-  display: table;
-  line-height: 150%;
-  text-align: center;
-}
-
-.content-text-first .content-cell:not(:first-child){
-  display: none !important;
-}
-
-#tumblr-box {
-  height: 200px;
-}
-
-.tumblr-post-container{
-  bottom: 0;
-}
-
-.tumblr-post-wrapper{
-  height: 250px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.nav{
-  height: 200px !important;
-  bottom: 0;
-}
-
-
-}
-
-@media screen and (max-width: 1024px) and (orientation : landscape) {
-
-p[class*="-p "]{
-  font-size: 3.5vw;
-}
-
-.control-color-by-rotating-device{
-  display: inline-block;
-  text-align: left;
-  padding-top: 4px;
-  font-size: 2.3vw;
-  line-height: 110%;
-  letter-spacing: 1px;
-}
-
-.content-text-taxi svg{
-  height: 85%;
-}
-
-.content-text-taxi-not-active svg{
-  height: 95px;
-}
-
-}
-
-@media screen and (max-width: 757px) and (orientation : landscape) {
-
-.box.small {
-  font-size: 25px;
-}
-
-.taxi-logo-svg{
-  width: 75% !important;
-  height: 75% !important;
-  margin-top: 4%;
-}
-
-.taxi-logo-color {
-    fill: #FFF;
-}
-
-#taxi.small {
-  font-size: 35px;
-}
-
-.content-text-first .content-cell:not(:first-child){
-  display: none !important;
-}
-
-
-.about-text-landscape{
-  font-size: 2.5vw;
-}
-
-.about-text-landscape-second{
-  font-size: 1.5vw;
-}
-
-.content-cell-about-text-landscape{
-  height: 45px !important;
-}
-
-
-.twttr-msg{
-  font-size: 3.5vw;
-}
-
-.twttr-msg p:nth-of-type(2) {
-  font-size: 2.2vw;
-}
-
-#social-icons .icon{
-  margin: 0 10px;
-}
-
-a[class$="copy-bg-parent"] svg {
-  width: 69% !important;
-  height: 69% !important;
-}
-
-.image-caption{
-  margin-top: -2%;
-}
-
-.nav{
-  height: 70%;
-}
-
-.content-text-taxi-not-active svg{
-  height: 65px;
-}
-
-}
-
-@media screen and (min-width: 480px) and (max-width: 840px) and (orientation : portrait) {
-
-.box {
-  display: block;
-  width: 100%;
-  height: 12%;
-  font-size: 50px;
-  overflow: hidden;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 99;
-}
-
-.box.small {
-  font-size: 35px;
-}
-
-#taxi {
-  height: 100%;
-  background-color: #000000;
-  color: transparent;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
-#taxi.inactive-side {
-  bottom: 0;
-  right: 0;
-}
-
-#taxi.inactive-up-down {
-  bottom: 0;
-  right: 0;
-}
-
-#taxi.inactive-side.inactive-up-down {
-  right: 0;
-}
-
-#taxi.small {
-  font-size: 35px;
-}
-
-.taxi-logo-svg {
-  margin-top: 4%;
-  width: 100% !important;
-  height: 100% !important;
-}
-
-
-.content-text-first .content-cell:not(:first-child){
-  display: none !important;
-}
-
-
-.about-text{
-  width: 72% !important;
-  margin: 0 auto;
-  font-size: 5vw;
-}
-
-#tumblr-box {
-  height: 300px;
-}
-
-.tumblr-post-container{
-  bottom: 0;
-}
-
-.tumblr-post-wrapper{
-  height: 300px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.twttr-msg{
-  font-size: 33px;
-}
-
-.twttr-msg p:nth-of-type(2) {
-  font-size: 22px;
-}
-
-#social-icons{
-  margin-top: 2%;
-}
-
-#social-icons .icon{
-  margin: 0 10px;
-}
-
-a[class$="copy-bg-parent"] svg {
-  width: 85% !important;
-  height: 85% !important;
-}
-
-.nav-circle {
-  display: none;
-  background: #fff !important;
-  border-color: #fff !important;
-}
-
-.nav-td .active{
-  background: transparent !important;
-}
-
-.image-caption{
-  color: #fff;
-  font-size: 45%;
-}
-
-.content-text-taxi svg{
-  height: 85%;
-}
-
-.content-text-taxi-not-active svg{
-  height: 41%;
-}
-
-
-}
-
-@media screen and (max-width: 480px) and (orientation : portrait) {
-
-.box {
-  display: block;
-  width: 100%;
-  height: 12%;
-  font-size: 50px;
-  overflow: hidden;
-  position: relative;
-  text-transform: uppercase;
-  z-index: 99;
-}
-
-.box.small {
-  font-size: 25px;
-}
-
-#taxi {
-  height: 100%;
-  background-color: #000000;
-  color: transparent;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-}
-
-#taxi.inactive-side {
-  bottom: 0;
-  right: 0;
-}
-
-#taxi.inactive-up-down {
-  bottom: 0;
-  right: 0;
-}
-
-#taxi.inactive-side.inactive-up-down {
-  right: 0;
-}
-
-#taxi.small {
-  font-size: 35px;
-}
-
-.taxi-logo-svg {
-  margin-top: 7%;
-  width: 68% !important;
-  height: 68% !important;
-}
-
-
-.content-text-first .content-cell:not(:first-child){
-  display: none !important;
-}
-
-
-#about .content-cell:nth-of-type(3) div{
-  padding-top: 22px;
-}
-
-#about .content-cell:nth-of-type(3) div,
-.about-text{
-  width: 72% !important;
-  margin: 0 auto;
-  font-size: 5vw;
-}
-
-
-#tumblr-box {
-  height: 200px;
-}
-
-.tumblr-post-container{
-  bottom: 0;
-}
-
-.tumblr-post-wrapper{
-  height: 200px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-
-.twttr-msg{
-  font-size: 6.5vw;
-}
-
-.twttr-msg p:nth-of-type(2) {
-  font-size: 5.7vw;
-}
-
-#social-icons .icon{
-  margin: 0 7px;
-}
-
-a[class$="copy-bg-parent"] svg {
-  width: 75% !important;
-  height: 75% !important;
-}
-
-.nav-circle {
-  display: none;
-  background: #fff !important;
-  border-color: #fff !important;
-}
-
-.nav-td .active{
-  background: transparent !important;
-}
-
-.image-caption{
-  color: #fff;
-}
-
-
-
-.content-text-taxi svg{
-  height: 85%;
-}
-
-.content-text-taxi-not-active svg{
-  height: 33%;
-}
-
+    .content-text-first .content-cell:first-child {
+        margin-top: 0;
+    }
+    p[class*="-p "] {
+        min-width: 0 !important;
+        max-width: 90% !important;
+        width: 90% !important;
+        height: 100%;
+        margin: 0 auto;
+        display: table;
+        line-height: 150%;
+        text-align: center;
+    }
+    .content-text-first .content-cell:not(:first-child) {
+        display: none !important;
+    }
+    #tumblr-box {
+        height: 200px;
+    }
+    .tumblr-post-container {
+        bottom: 0;
+    }
+    .tumblr-post-wrapper {
+        height: 250px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nav {
+        height: 200px !important;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    p[class*="-p "] {
+        font-size: 3.5vw;
+    }
+    .control-color-by-rotating-device {
+        display: inline-block;
+        text-align: left;
+        padding-top: 4px;
+        font-size: 2.3vw;
+        line-height: 110%;
+        letter-spacing: 1px;
+    }
+    .content-text-taxi svg {
+        height: 85%;
+    }
+    .content-text-taxi-not-active svg {
+        height: 95px;
+    }
+}
+
+@media screen and (max-width: 757px) and (orientation: landscape) {
+    .box.small {
+        font-size: 25px;
+    }
+    .taxi-logo-svg {
+        width: 75% !important;
+        height: 75% !important;
+        margin-top: 4%;
+    }
+    .taxi-logo-color {
+        fill: #FFF;
+    }
+    #taxi.small {
+        font-size: 35px;
+    }
+    .content-text-first .content-cell:not(:first-child) {
+        display: none !important;
+    }
+    .about-text-landscape {
+        font-size: 2.5vw;
+    }
+    .about-text-landscape-second {
+        font-size: 1.5vw;
+    }
+    .content-cell-about-text-landscape {
+        height: 45px !important;
+    }
+    .twttr-msg {
+        font-size: 3.5vw;
+    }
+    .twttr-msg p:nth-of-type(2) {
+        font-size: 2.2vw;
+    }
+    #social-icons .icon {
+        margin: 0 10px;
+    }
+    a[class$="copy-bg-parent"] svg {
+        width: 69% !important;
+        height: 69% !important;
+    }
+    .image-caption {
+        margin-top: -2%;
+    }
+    .nav {
+        height: 70%;
+    }
+    .content-text-taxi-not-active svg {
+        height: 65px;
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 840px) and (orientation: portrait) {
+    .box {
+        display: block;
+        width: 100%;
+        height: 12%;
+        font-size: 50px;
+        overflow: hidden;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 99;
+    }
+    .box.small {
+        font-size: 35px;
+    }
+    #taxi {
+        height: 100%;
+        background-color: #000000;
+        color: transparent;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    #taxi.inactive-side {
+        bottom: 0;
+        right: 0;
+    }
+    #taxi.inactive-up-down {
+        bottom: 0;
+        right: 0;
+    }
+    #taxi.inactive-side.inactive-up-down {
+        right: 0;
+    }
+    #taxi.small {
+        font-size: 35px;
+    }
+    .taxi-logo-svg {
+        margin-top: 4%;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .content-text-first .content-cell:not(:first-child) {
+        display: none !important;
+    }
+    .about-text {
+        width: 72% !important;
+        margin: 0 auto;
+        font-size: 5vw;
+    }
+    #tumblr-box {
+        height: 300px;
+    }
+    .tumblr-post-container {
+        bottom: 0;
+    }
+    .tumblr-post-wrapper {
+        height: 300px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .twttr-msg {
+        font-size: 33px;
+    }
+    .twttr-msg p:nth-of-type(2) {
+        font-size: 22px;
+    }
+    #social-icons {
+        margin-top: 2%;
+    }
+    #social-icons .icon {
+        margin: 0 10px;
+    }
+    a[class$="copy-bg-parent"] svg {
+        width: 85% !important;
+        height: 85% !important;
+    }
+    .nav-circle {
+        display: none;
+        background: #fff !important;
+        border-color: #fff !important;
+    }
+    .nav-td .active {
+        background: transparent !important;
+    }
+    .image-caption {
+        color: #fff;
+        font-size: 45%;
+    }
+    .content-text-taxi svg {
+        height: 85%;
+    }
+    .content-text-taxi-not-active svg {
+        height: 41%;
+    }
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    .box {
+        display: block;
+        width: 100%;
+        height: 12%;
+        font-size: 50px;
+        overflow: hidden;
+        position: relative;
+        text-transform: uppercase;
+        z-index: 99;
+    }
+    .box.small {
+        font-size: 25px;
+    }
+    #taxi {
+        height: 100%;
+        background-color: #000000;
+        color: transparent;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    #taxi.inactive-side {
+        bottom: 0;
+        right: 0;
+    }
+    #taxi.inactive-up-down {
+        bottom: 0;
+        right: 0;
+    }
+    #taxi.inactive-side.inactive-up-down {
+        right: 0;
+    }
+    #taxi.small {
+        font-size: 35px;
+    }
+    .taxi-logo-svg {
+        margin-top: 7%;
+        width: 68% !important;
+        height: 68% !important;
+    }
+    .content-text-first .content-cell:not(:first-child) {
+        display: none !important;
+    }
+    #about .content-cell:nth-of-type(3) div {
+        padding-top: 22px;
+    }
+    #about .content-cell:nth-of-type(3) div,
+    .about-text {
+        width: 72% !important;
+        margin: 0 auto;
+        font-size: 5vw;
+    }
+    #tumblr-box {
+        height: 200px;
+    }
+    .tumblr-post-container {
+        bottom: 0;
+    }
+    .tumblr-post-wrapper {
+        height: 200px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .twttr-msg {
+        font-size: 6.5vw;
+    }
+    .twttr-msg p:nth-of-type(2) {
+        font-size: 5.7vw;
+    }
+    #social-icons .icon {
+        margin: 0 7px;
+    }
+    a[class$="copy-bg-parent"] svg {
+        width: 75% !important;
+        height: 75% !important;
+    }
+    .nav-circle {
+        display: none;
+        background: #fff !important;
+        border-color: #fff !important;
+    }
+    .nav-td .active {
+        background: transparent !important;
+    }
+    .image-caption {
+        color: #fff;
+    }
+    .content-text-taxi svg {
+        height: 85%;
+    }
+    .content-text-taxi-not-active svg {
+        height: 33%;
+    }
 }
